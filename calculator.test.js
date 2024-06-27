@@ -1,5 +1,5 @@
 
-import { add, restar, dividir, multiplicar, dividirOpcionLaura } from './calculator'
+import { add, restar, dividir, multiplicar, dividirOpcionLaura, exponencialOpcion, exponencial,  } from './calculator'
 import { expect, test } from 'vitest'
 
 
@@ -87,7 +87,7 @@ test('Exponencial multiplica el primer parametro el numero de veces del segundo 
      //then
      const resultadoEsperado = 4
 
-     expect(functionDividirOpcionLaura).toBe(resultadoEsperado)
+     expect(resultado).toBe(resultadoEsperado)
 })
 
 test('Exponencial devuelve que el exponente no puede ser menor de cero', () => {
@@ -99,7 +99,7 @@ test('Exponencial devuelve que el exponente no puede ser menor de cero', () => {
      //then
      const resultadoEsperado = "El exponente no puede ser menor de cero"
 
-     expect(functionDividirOpcionLaura).toBe(resultadoEsperado)
+     expect(resultado).toBe(resultadoEsperado)
 })
 
 test('Si la base es menor de cero y el exponente es impar el resultado es menor de cero', () => {
@@ -111,5 +111,18 @@ test('Si la base es menor de cero y el exponente es impar el resultado es menor 
      const resultado = exponencial(parametro1, parametro2)
      //Then
      expect(resultado).toBe(resultadoEsperado);
-}
-)
+})
+
+
+test('Funcion propia de exponente partiendo de la multiplicación', () => {
+//Given
+const base = 3
+const exponente = 3
+const resultadoEsperado = 27
+//When
+const resultado = exponencialOpcion(base, exponente)
+
+//Then
+expect(resultado).toBe(resultadoEsperado)
+
+})

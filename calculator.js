@@ -29,3 +29,12 @@ export function exponencial(base, exponente) {
      return base ** exponente
 }
 
+export function exponencialOpcion( base, exponente) {
+     //base multiplicada si misma tantas veces como el numero del exponente
+     let resultado = base;
+     for (let i = 1; i < exponente; i++){
+          resultado = resultado * base;
+          
+     }
+     return resultado
+}
