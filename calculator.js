@@ -22,5 +22,10 @@ export function dividirOpcionLaura(dividendo, divisor) {
      return (divisor === 0) ? 0 : dividendo / divisor;
 }
 
-
+export function exponencial(base, exponente) {
+     if (exponente < 0) {
+          return "El exponente no puede ser menor de cero"
+     }
+     return base ** exponente
+}
 

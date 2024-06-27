@@ -77,3 +77,39 @@ test('DividirOpcionLaura por cero números usando el método DividirOpcionLaura'
 
      expect(functionDividirOpcionLaura).toBe(resultadoEsperado)
 })
+
+test('Exponencial multiplica el primer parametro el numero de veces del segundo parametro', () => {
+     //given
+     const base = 2
+     const exponente = 2
+     //when
+     const resultado = exponencial(base, exponente)
+     //then
+     const resultadoEsperado = 4
+
+     expect(functionDividirOpcionLaura).toBe(resultadoEsperado)
+})
+
+test('Exponencial devuelve que el exponente no puede ser menor de cero', () => {
+     //given
+     const base = 2
+     const exponente = -2
+     //when
+     const resultado = exponencial(base, exponente)
+     //then
+     const resultadoEsperado = "El exponente no puede ser menor de cero"
+
+     expect(functionDividirOpcionLaura).toBe(resultadoEsperado)
+})
+
+test('Si la base es menor de cero y el exponente es impar el resultado es menor de cero', () => {
+     // Given
+     const parametro1 = -2
+     const parametro2 = 3
+     const resultadoEsperado = -8;
+     //When
+     const resultado = exponencial(parametro1, parametro2)
+     //Then
+     expect(resultado).toBe(resultadoEsperado);
+}
+)
